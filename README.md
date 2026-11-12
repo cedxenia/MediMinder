@@ -86,9 +86,9 @@ For medicines that are often out of stock, this option raises the low-supply war
 
 | Team Member | Role |
 |---|---|
-| Keenan Cedric Marana | Project Lead |
-| Kelvin Alastair Rocafort | Backend Developer |
-| Elric Timothy Gulay | Frontend Developer |
+| Keenan Cedric Marana | TBA |
+| Kelvin Alastair Rocafort | TBA |
+| Elric Timothy Gulay | TBA |
 
 
 
