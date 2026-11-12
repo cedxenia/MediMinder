@@ -1,10 +1,10 @@
 # MediMinder
 
-## 2. Project Description
+## 1. Project Description
 
 MediMinder is a medication companion app that helps users manage one or more medicines, each with its own schedule. It warns users before their supply runs out, lets them keep a quick personal log of how they feel after taking medication, and produces a summary report they can bring to a doctor visit. The app is designed for people managing chronic conditions who need to keep track of several medicines at once.
 
-## 3. Problem Being Addressed
+## 2. Problem Being Addressed
 
 Chronic patients who take multiple medications often:
 
@@ -14,7 +14,7 @@ Chronic patients who take multiple medications often:
 
 These issues can result in missed doses and gaps in care. MediMinder addresses them by centralizing medication schedules, supply tracking, and personal health notes in one place.
 
-## 4. Project Objectives
+## 3. Project Objectives
 
 **General Objective**
 To develop MediMinder, a medication companion app that helps chronic patients stay on schedule with their medicines, avoid unexpected supply gaps, and keep organized records to share with their healthcare providers.
@@ -28,36 +28,34 @@ To develop MediMinder, a medication companion app that helps chronic patients st
 - Generate a doctor visit summary covering adherence, supply status, patterns, skipped doses, notes, allergies, and conditions.
 - Help users locate pharmacies that carry their medicines, ranked by previously recorded stock status.
 
-## 5. Target Users
+## 4. Target Users
 
 - **Chronic patients** managing one or more daily medications (for example, blood pressure and diabetes medicines).
 - **Caregivers or family members** who help organize a patient's medication schedule.
 - **Patients preparing for doctor visits** who want a clear summary of their adherence and how they have been feeling.
 
-## 6. Main Features
+## 5. Main Features
 
-### 6.1 Multiple Medication Support
+### 5.1 Multiple Medication Support
 Add several medications, each with its own name, dosage, and dose times.
 
-### 6.2 Low Supply Alert
+### 5.2 Low Supply Alert
 Enter the number of pills or doses left. The app shows days of supply remaining and the projected run-out date based on daily doses, and warns the user when 3 days or less remain, even if the dose threshold has not been reached (for example, "Only 3 doses left, consider refilling soon").
 
-### 6.3 Simple Health Notes
+### 5.3 Simple Health Notes
 An optional field for quick feelings or notes after taking medication (for example, "dizzy," "fine," "nauseous"). If the same feeling appears after the same medicine at least twice and in 40% or more of its doses, it is flagged in the journal (for example, "Dizzy" after 3 of 5 doses of one medicine). This is a personal log, not medical tracking.
 
-### 6.4 Prescription Scanning (Meds Tab)
+### 5.4 Prescription Scanning (Meds Tab)
 Take a photo of a prescription, medical certificate, or medicine label. The app reads and fills in each medicine's name, dosage, doses per day, and quantity dispensed. The user reviews and edits all fields before saving. If a photo is unreadable, the app says so rather than guessing.
 
-###  6.5 Scan to Pharmacy (Experimental)
+###  5.5 Scan to Pharmacy (Experimental)
 After a scan, each medicine in the review step includes a "Where to get it" section listing saved pharmacies, ranked as follows:
 
 1. Pharmacies where the medicine was previously marked In stock.
 2. Pharmacies not yet checked for that medicine.
 3. Pharmacies where the medicine was previously marked Out of stock.
 
-*Note: this feature has not been fully tested.*
-
-### 6.6 Doctor Visit Summary
+### 5.6 Doctor Visit Summary
 One tap generates a report for the last 14, 30, or 90 days that can be copied. It includes:
 
 - **Adherence:** doses marked Taken versus doses scheduled, per medication, with a percentage (for example, "Taken 52 of 60 (87%)"). Days before a medicine was added are not counted, and only doses whose times have already passed are included.
@@ -67,10 +65,10 @@ One tap generates a report for the last 14, 30, or 90 days that can be copied. I
 - **Skipped Doses:** a record of missed doses.
 - **Allergies and Conditions:** included if the user has entered them.
 
-### 6.7 Find Nearby Pharmacies
+### 5.7 Find Nearby Pharmacies
 Opens a map search for pharmacies carrying a given medicine. Adding a city or neighborhood under "My Pharmacies" improves search results.
 
-### 6.8 "Hard to Find" Switch
+### 5.8 "Hard to Find" Switch
 For medicines that are often out of stock, this option raises the low-supply warning to 14 days in advance.
 
 ## 7. Technologies Used
