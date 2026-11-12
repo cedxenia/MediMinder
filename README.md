@@ -71,18 +71,18 @@ Opens a map search for pharmacies carrying a given medicine. Adding a city or ne
 ### 5.8 "Hard to Find" Switch
 For medicines that are often out of stock, this option raises the low-supply warning to 14 days in advance.
 
-## 7. Technologies Used
+## 6. Technologies Used
 
 | Technology | Purpose |
 |---|---|
-| [TO BE FILLED] | [Language / framework for the app] |
-| [TO BE FILLED] | [Data storage for medications, dose logs, and pharmacies] |
-| [TO BE FILLED] | [Image capture and text recognition for prescription scanning] |
-| [TO BE FILLED] | [Map and pharmacy search service] |
+| Java | [Language / framework for the app] |
+| TBA | [Data storage for medications, dose logs, and pharmacies] |
+| TBA | [Image capture and text recognition for prescription scanning] |
+| TBA | [Map and pharmacy search service] |
 
 *Replace the placeholders above with the stack actually used in the project.*
 
-## 8. Team Members and Roles
+## 7. Team Members and Roles
 
 | Team Member | Role |
 |---|---|
@@ -90,52 +90,24 @@ For medicines that are often out of stock, this option raises the low-supply war
 | Kelvin Alastair Rocafort | Backend Developer |
 | Elric Timothy Gulay | Frontend Developer |
 
+
+
 ## 9. OOP Concepts Demonstrated
-
-*Suggested mapping based on the app's features. Confirm against the actual code before submission.*
-
-- **Encapsulation:** Medication, DoseLog, and Pharmacy classes keep their data private and expose it through methods (for example, a Medication's remaining supply is updated only through a dedicated method).
-- **Inheritance:** a base class such as Reminder or Alert can be extended by LowSupplyAlert and StockAlert.
-- **Polymorphism:** different summary sections (adherence, supply, patterns) implement a common interface such as ReportSection and are generated the same way.
-- **Abstraction:** a common interface for pharmacy lookup allows the map search to be swapped without changing the rest of the app.
-- **Composition:** a Schedule object is composed into each Medication, and a Report is composed of multiple ReportSection objects.
+TBA
 
 ## 10. Instructions for Running the Program
-
-[TO BE FILLED]
-
-Suggested structure:
-
-1. Prerequisites (required software and versions).
-2. Clone or download the repository: `git clone [repository-url]`
-3. Install dependencies: `[install command]`
-4. Configure any required settings or API keys.
-5. Run the application: `[run command]`
-6. Open the app at `[local address or URL]`.
+TBA
 
 ## 11. Sample Screenshots
-
-[TO BE FILLED: add screenshots of the medication list, low supply alert, health notes journal, prescription scan review, and doctor visit summary.]
+TBA
 
 ## 12. Known Limitations
-
-- **Not a medical device.** MediMinder is a personal organizer and does not provide medical advice. Users should follow their doctor's instructions.
-- **Scan accuracy.** Text read from prescription photos may be incorrect, so all scanned details must be reviewed before saving.
-- **Pharmacy stock information is user-reported.** Stock ranking depends on what the user has previously marked, so it may be outdated.
-- **Scan to Pharmacy is untested.** This feature has not been fully tested.
-- **Pattern detection is simple.** Patterns are flagged using a fixed rule (at least 2 occurrences and 40% of doses) and do not account for other causes.
-- **Map search depends on external results.** Pharmacy search quality depends on the map service and on the city or neighborhood the user provides.
+TBA
 
 ## 13. Future Improvements
-
-- Complete testing of the Scan to Pharmacy feature and improve stock ranking.
-- Add reminders and notifications for upcoming doses.
-- Improve prescription scanning accuracy and support more label formats.
-- Allow export of doctor visit summaries as a file (for example, PDF).
-- Support multiple user profiles for caregivers managing more than one patient.
+TBA
 
 ## 14. Project Contributors
 
-- Marana, Keenan
-- Rocafort, Kelvin
-- Gulay, Elric
+TBA
+
