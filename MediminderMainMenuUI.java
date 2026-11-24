@@ -25,8 +25,13 @@ public class MediminderMainMenuUI extends JFrame {
             new MediminderSearchUI().setVisible(true);
             this.dispose();
         });
+        JButton notesButton = createPillButton("ADD NOTES");
+        notesButton.addActionListener(e -> {
+            new MediminderNotesUI().setVisible(true);
+            this.dispose();
+        });
         center.add(searchButton);
-        center.add(createPillButton("ADD NOTES"));
+        center.add(notesButton);
         center.add(createPillButton("MEDICINE OR PHARMACIES"));
         add(center, BorderLayout.CENTER);
 
