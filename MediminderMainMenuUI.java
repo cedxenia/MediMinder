@@ -20,7 +20,12 @@ public class MediminderMainMenuUI extends JFrame {
         center.setOpaque(false);
         center.setBorder(BorderFactory.createEmptyBorder(10, 50, 10, 50));
 
-        center.add(createPillButton("SEARCH"));
+        JButton searchButton = createPillButton("SEARCH");
+        searchButton.addActionListener(e -> {
+            new MediminderSearchUI().setVisible(true);
+            this.dispose();
+        });
+        center.add(searchButton);
         center.add(createPillButton("ADD NOTES"));
         center.add(createPillButton("MEDICINE OR PHARMACIES"));
         add(center, BorderLayout.CENTER);
