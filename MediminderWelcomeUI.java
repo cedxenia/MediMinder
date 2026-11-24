@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 
-
 public class MediminderWelcomeUI extends JFrame {   
 
 public MediminderWelcomeUI() {
@@ -13,7 +12,7 @@ public MediminderWelcomeUI() {
 
         // 2. Main Panel split into 2 equal columns (Left & Right)
         JPanel mainPanel = new JPanel(new GridLayout(1, 2, 40, 0));
-        mainPanel.setBackground(new Color(242, 242, 242));
+        mainPanel.setBackground(new Color(137, 207, 240));
         mainPanel.setBorder(BorderFactory.createEmptyBorder(50, 75, 50, 75));
 
         // ================= LEFT COLUMN =================
@@ -45,9 +44,12 @@ public MediminderWelcomeUI() {
         getStartedBtn.setFocusPainted(false);
         getStartedBtn.setAlignmentX(Component.LEFT_ALIGNMENT);
         getStartedBtn.setMaximumSize(new Dimension(170, 42));
-        getStartedBtn.addActionListener(e -> 
-            JOptionPane.showMessageDialog(this, "Navigating to Medicine Setup...")
-        );
+        getStartedBtn.addActionListener(e -> {
+            
+            JOptionPane.showMessageDialog(this, "Navigating to MediMenu...");
+            new MediminderMainMenuUI().setVisible(true);
+            this.dispose(); // Close the welcome screen
+        });
 
         // Add items to left column with vertical spacing
         leftPanel.add(Box.createVerticalStrut(20));
@@ -68,6 +70,8 @@ public MediminderWelcomeUI() {
         mainPanel.add(leftPanel);
         mainPanel.add(rightPanel);
         setContentPane(mainPanel);
+
+
     }
 
     // Simple helper method to load and resize your image
