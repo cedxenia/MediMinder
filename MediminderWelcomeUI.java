@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 
-public class MediminderWelcomeUI extends JFrame {
+public class MediminderWelcomeUI extends JFrame {   
 
 public MediminderWelcomeUI() {
         // 1. Basic Window Setup
@@ -25,7 +25,7 @@ public MediminderWelcomeUI() {
         JPanel miniHeader = new JPanel(new FlowLayout(FlowLayout.LEFT, 8, 0));
         miniHeader.setOpaque(false);
         miniHeader.setAlignmentX(Component.LEFT_ALIGNMENT);
-        miniHeader.add(loadLogo("logo.png", 28, 28));
+        miniHeader.add(loadLogo("MediminderLogo.png", 60, 50));
         miniHeader.add(new JLabel("Mediminder"));
 
         // Main Headline
@@ -62,7 +62,7 @@ public MediminderWelcomeUI() {
         // ================= RIGHT COLUMN =================
         JPanel rightPanel = new JPanel(new GridBagLayout()); // Centers the image
         rightPanel.setOpaque(false);
-        rightPanel.add(loadLogo("logo.png", 250, 220));
+        rightPanel.add(loadLogo("MediminderLogo.png", 300, 250));
 
         // Add both columns to main window
         mainPanel.add(leftPanel);
