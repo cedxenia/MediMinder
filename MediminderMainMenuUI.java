@@ -32,7 +32,12 @@ public class MediminderMainMenuUI extends JFrame {
         });
         center.add(searchButton);
         center.add(notesButton);
-        center.add(createPillButton("MEDICINE OR PHARMACIES"));
+        JButton reminderButton = createPillButton("REMINDERS");
+        reminderButton.addActionListener(e -> {
+            new MediminderReminderUI().setVisible(true);
+            this.dispose();
+        });
+        center.add(reminderButton);
         add(center, BorderLayout.CENTER);
 
         // 3. Bottom Bar
