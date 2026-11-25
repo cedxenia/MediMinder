@@ -47,8 +47,8 @@ public MediminderWelcomeUI() {
         getStartedBtn.setMaximumSize(new Dimension(170, 42));
         getStartedBtn.addActionListener(e -> {
             
-            JOptionPane.showMessageDialog(this, "Navigating to MediMenu...");
-            new MediminderMainMenuUI().setVisible(true);
+            JOptionPane.showMessageDialog(this, "Navigating to Login...");
+            new MediMinderLogin().setVisible(true);
             this.dispose(); // Close the welcome screen
         });
 
