@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.net.URL;
 
 public class MediminderWelcomeUI extends JFrame {   
 
@@ -76,7 +77,11 @@ public MediminderWelcomeUI() {
 
     // Simple helper method to load and resize your image
     private JLabel loadLogo(String path, int width, int height) {
-        ImageIcon icon = new ImageIcon(path);
+        URL resource = getClass().getResource(path);
+        if (resource == null) {
+            throw new IllegalStateException("Missing image resource: " + path);
+        }
+        ImageIcon icon = new ImageIcon(resource);
         Image scaled = icon.getImage().getScaledInstance(width, height, Image.SCALE_SMOOTH);
         return new JLabel(new ImageIcon(scaled));
     }

@@ -75,7 +75,8 @@ For medicines that are often out of stock, this option raises the low-supply war
 
 | Technology | Purpose |
 |---|---|
-| Java | [Language / framework for the app] |
+| Java | Language and runtime for the desktop app |
+| Maven | Build and package management |
 | TBA | [Data storage for medications, dose logs, and pharmacies] |
 | TBA | [Image capture and text recognition for prescription scanning] |
 | TBA | [Map and pharmacy search service] |
@@ -96,7 +97,20 @@ For medicines that are often out of stock, this option raises the low-supply war
 TBA
 
 ## 10. Instructions for Running the Program
-TBA
+
+Requires a JDK and Maven.
+
+From the project directory, build the executable JAR:
+
+```shell
+mvn clean package
+```
+
+Run the app:
+
+```shell
+java -jar target/mediminder-1.0-SNAPSHOT.jar
+```
 
 ## 11. Sample Screenshots
 TBA
