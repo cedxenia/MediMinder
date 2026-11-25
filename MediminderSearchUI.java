@@ -15,7 +15,7 @@ public class MediminderSearchUI extends JFrame {
         topBar.setOpaque(false);
         topBar.setBorder(BorderFactory.createEmptyBorder(25, 45, 0, 45));
 
-        JButton backBtn = createPill("←", 45);
+        JButton backBtn = createPill("\u2190", 45);
         backBtn.setPreferredSize(new Dimension(55, 45));
         backBtn.addActionListener(e -> {
             new MediminderMainMenuUI().setVisible(true);
@@ -39,7 +39,7 @@ public class MediminderSearchUI extends JFrame {
         searchBarPanel.setPreferredSize(new Dimension(500, 45));
         searchBarPanel.setBorder(BorderFactory.createEmptyBorder(5, 20, 5, 20));
 
-        JLabel searchIcon = new JLabel("🔍");
+        JLabel searchIcon = new JLabel("\uD83D\uDD0D");
         searchIcon.setFont(new Font("SansSerif", Font.PLAIN, 16));
 
         JTextField searchField = new JTextField();

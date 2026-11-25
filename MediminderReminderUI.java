@@ -15,7 +15,7 @@ public class MediminderReminderUI extends JFrame {
         topBar.setOpaque(false);
         topBar.setBorder(BorderFactory.createEmptyBorder(25, 45, 0, 45));
 
-        JButton backBtn = new JButton("←");
+        JButton backBtn = new JButton("\u2190");
         backBtn.setFont(new Font("SansSerif", Font.BOLD, 16));
         backBtn.setBackground(Color.WHITE);
         backBtn.setFocusPainted(false);
