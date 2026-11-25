@@ -28,7 +28,7 @@ public MediminderWelcomeUI() {
         miniHeader.add(new JLabel("Mediminder"));
 
         // Main Headline
-        JLabel titleLabel = new JLabel("<html>Hello, I’m<br>Mediminder</html>");
+        JLabel titleLabel = new JLabel("<html>Hello, I'm<br>Mediminder</html>");
         titleLabel.setFont(new Font("Serif", Font.PLAIN, 60));
         titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
 

@@ -18,7 +18,7 @@ public class MediminderNotesUI extends JFrame {
         // 1. Top Row: Back Button + Title
         JPanel top = new JPanel(new FlowLayout(FlowLayout.LEFT, 15, 0));
         top.setOpaque(false);
-        JButton backBtn = new JButton("←");
+        JButton backBtn = new JButton("\u2190");
         backBtn.setBackground(Color.WHITE);
         backBtn.addActionListener(e -> {
             new MediminderMainMenuUI().setVisible(true);
