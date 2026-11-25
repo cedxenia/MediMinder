@@ -75,12 +75,10 @@ For medicines that are often out of stock, this option raises the low-supply war
 
 | Technology | Purpose |
 |---|---|
-| Java | [Language / framework for the app] |
-| TBA | [Data storage for medications, dose logs, and pharmacies] |
-| TBA | [Image capture and text recognition for prescription scanning] |
-| TBA | [Map and pharmacy search service] |
-
-*Replace the placeholders above with the stack actually used in the project.*
+| Java Swing | Desktop user interface |
+| Java object serialization | Local persistence in the user's `.mediminder` folder |
+| OpenStreetMap | Opens an external map search using a manually entered city or neighborhood |
+| OCR | Not configured; prescription images can be selected, but details must be reviewed and entered manually |
 
 ## 7. Team Members and Roles
 
@@ -96,13 +94,22 @@ For medicines that are often out of stock, this option raises the low-supply war
 TBA
 
 ## 10. Instructions for Running the Program
-TBA
+
+1. Install Java 8 or later and Maven.
+2. Double-click `Mediminder.bat`. It builds the project and starts the app. Alternatively, run `mvn package` and then `java -jar target/mediminder-1.0-SNAPSHOT.jar`.
+3. Enter your name the first time. No password or account is created.
+4. Delete notes, dose records, medicines, or pharmacies from their respective screens. The app saves data under the current user's home directory in `.mediminder`.
+
+The database SQL file is not connected to this desktop application; the current app uses local file storage.
 
 ## 11. Sample Screenshots
 TBA
 
 ## 12. Known Limitations
-TBA
+
+- Prescription images are selected for manual review; no OCR engine is included, so the app does not extract text from images.
+- Pharmacy map searches open OpenStreetMap in the browser and use a manually entered location; the app does not access device GPS or verify live stock.
+- Dose reminders appear while the application is running. Local data is not encrypted and is stored on the current computer.
 
 ## 13. Future Improvements
 TBA

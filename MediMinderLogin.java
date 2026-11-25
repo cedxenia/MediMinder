@@ -2,57 +2,42 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MediMinderLogin extends JFrame {
+    private final JTextField nameField = new JTextField(22);
 
     public MediMinderLogin() {
-        setTitle("Mediminder - Login");
-        setSize(500, 350);
+        super("MediMinder - Your name");
+        MediminderReminderService.start();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(420, 220);
         setLocationRelativeTo(null);
 
-        JPanel panel = new JPanel(null);
-        panel.setBackground(new Color(135, 206, 235));
+        nameField.setText(MediminderStore.getUserName());
+        JPanel form = new JPanel(new GridLayout(0, 1, 8, 8));
+        form.setBorder(BorderFactory.createEmptyBorder(25, 30, 20, 30));
+        form.add(new JLabel("What should MediMinder call you?"));
+        form.add(nameField);
+        JButton save = new JButton("Save name and continue");
+        save.addActionListener(event -> saveName());
+        form.add(save);
+        nameField.addActionListener(event -> saveName());
+        setContentPane(form);
+    }
 
-        JLabel title = new JLabel("LOGIN");
-        title.setFont(new Font("Georgia", Font.BOLD, 28));
-        title.setBounds(195, 30, 150, 35);
-        panel.add(title);
-
-        JLabel accLabel = new JLabel("Account:");
-        accLabel.setFont(new Font("Georgia", Font.ITALIC, 16));
-        accLabel.setBounds(90, 100, 90, 25);
-        panel.add(accLabel);
-
-        JTextField accField = new JTextField();
-        accField.setBounds(190, 100, 190, 28);
-        panel.add(accField);
-
-        JLabel passLabel = new JLabel("Password:");
-        passLabel.setFont(new Font("Georgia", Font.ITALIC, 16));
-        passLabel.setBounds(90, 150, 90, 25);
-        panel.add(passLabel);
-
-        JPasswordField passField = new JPasswordField();
-        passField.setBounds(190, 150, 190, 28);
-        panel.add(passField);
-
-        JButton loginBtn = new JButton("LOGIN");
-        loginBtn.setBackground(Color.WHITE);
-        loginBtn.setFont(new Font("SansSerif", Font.BOLD, 12));
-        loginBtn.setBounds(195, 215, 110, 32);
-        panel.add(loginBtn);
-
-        loginBtn.addActionListener(e -> {
-            String account = accField.getText();
-            String password = new String(passField.getPassword());
+    private void saveName() {
+        try {
+            MediminderStore.setUserName(nameField.getText());
             new MediminderMainMenuUI().setVisible(true);
-            this.dispose();
-
-        });
-
-        add(panel);
+            dispose();
+        } catch (IllegalArgumentException ex) {
+            JOptionPane.showMessageDialog(this, ex.getMessage(),
+                "MediMinder", JOptionPane.ERROR_MESSAGE);
+        } catch (IllegalStateException ex) {
+            JOptionPane.showMessageDialog(this, ex.getMessage(),
+                "MediMinder", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     public static void main(String[] args) {
-        new MediMinderLogin().setVisible(true);
+        SwingUtilities.invokeLater(() -> new MediMinderLogin().setVisible(true));
     }
 }

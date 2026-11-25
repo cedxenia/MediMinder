@@ -39,17 +39,20 @@ public MediminderWelcomeUI() {
         subtitleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
 
         // Standard "Let's Get Started" Button
-        JButton getStartedBtn = new JButton("Let's Get Started");
+        boolean returningUser = !MediminderStore.getUserName().isEmpty();
+        JButton getStartedBtn = new JButton(returningUser ? "Continue" : "Let's Get Started");
         getStartedBtn.setFont(new Font("SansSerif", Font.PLAIN, 15));
         getStartedBtn.setBackground(Color.WHITE);
         getStartedBtn.setFocusPainted(false);
         getStartedBtn.setAlignmentX(Component.LEFT_ALIGNMENT);
         getStartedBtn.setMaximumSize(new Dimension(170, 42));
         getStartedBtn.addActionListener(e -> {
-            
-            JOptionPane.showMessageDialog(this, "Navigating to Login...");
-            new MediMinderLogin().setVisible(true);
-            this.dispose(); // Close the welcome screen
+            if (MediminderStore.getUserName().isEmpty()) {
+                new MediMinderLogin().setVisible(true);
+            } else {
+                new MediminderMainMenuUI().setVisible(true);
+            }
+            this.dispose();
         });
 
         // Add items to left column with vertical spacing
