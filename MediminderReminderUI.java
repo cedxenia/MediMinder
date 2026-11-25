@@ -1,3 +1,4 @@
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -69,7 +70,7 @@ public class MediminderReminderUI extends JFrame {
         row.add(text, BorderLayout.CENTER);
         return row;
     }
-
+    // Test the Reminder UI independently
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new MediminderReminderUI().setVisible(true));
     }
