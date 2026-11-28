@@ -242,7 +242,8 @@ public class MediminderSearchUI extends JFrame {
             return;
         }
         String location = locationField.getText().trim();
-        String query = "pharmacy " + medicine + (location.isEmpty() ? "" : " " + location);
+        String query =  (location.isEmpty() ? "" : " " + location);
+            //"pharmacy " + medicine +
         try {
             if (!Desktop.isDesktopSupported()
                     || !Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
